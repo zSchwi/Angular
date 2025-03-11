@@ -9,3 +9,9 @@
 } @else {
 <h1>Ola usuario</h1>
 }
+
+<ul>
+    @for (item of items(); track item.id) {
+    <li>{{item.name}} {{item.quantity}}</li>
+    }
+</ul>
