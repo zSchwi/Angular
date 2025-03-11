@@ -9,8 +9,14 @@ import { Component, signal } from '@angular/core';
 export class HomeComponent {
   protected firstName = signal('Rafael');
 
+  protected isAdmin = signal(false);
+
 
   mudarNome() {
-    this.firstName.update(() => "Maria")
+    this.firstName.update(() => "Maria");
+  }
+
+  changeIsAdmin() {
+    this.isAdmin.update(() => !this.isAdmin());
   }
 }
